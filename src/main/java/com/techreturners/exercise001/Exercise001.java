@@ -1,7 +1,9 @@
 package com.techreturners.exercise001;
 
 import java.util.List;
-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 public class Exercise001 {
     public String capitalizeWord(String word) {
         // Add your code here
@@ -19,12 +21,23 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-        // Add your code here
-        return "";
+        StringBuilder reversestr = new StringBuilder();
+        reversestr.append(sentence);
+        reversestr = reversestr.reverse();
+        
+        return reversestr.toString();
     }
 
     public int countLinuxUsers(List<User> users) {
-        // Add your code here
-        return 0;
+
+         int count=0;
+         for(User userObj : users)
+           {
+              if(userObj.getType() == "Linux"){
+                count++;
+            }
+             }
+       
+        return count;
     }
 }

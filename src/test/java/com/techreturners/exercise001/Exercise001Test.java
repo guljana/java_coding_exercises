@@ -7,6 +7,8 @@ import java.util.List;
 import org.junit.Ignore;
 import org.junit.Test;
 
+
+
 public class Exercise001Test {
 
     @Test
@@ -45,7 +47,7 @@ public class Exercise001Test {
     }
 
     @Test
-    @Ignore
+    
 
     public void checkSentenceReverse() {
         Exercise001 ex001 = new Exercise001();
@@ -54,7 +56,6 @@ public class Exercise001Test {
     }
 
     @Test
-    @Ignore
 
     public void checkLinuxUsers() {
         Exercise001 ex001 = new Exercise001();
