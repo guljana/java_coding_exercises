@@ -36,7 +36,6 @@ public class Exercise001Test {
     }
 
     @Test
-    @Ignore
 
     public void checkAddVat() {
         Exercise001 ex001 = new Exercise001();
