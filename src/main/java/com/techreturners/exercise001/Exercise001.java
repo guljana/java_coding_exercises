@@ -8,41 +8,40 @@ import java.lang.Math;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 public class Exercise001 {
-    public String capitalizeWord(String word) {
-        // Add your code here
-        return Character.toUpperCase(word.charAt(0)) + word.substring(1);
-    }
+	public String capitalizeWord(String word) {
+		return Character.toUpperCase(word.charAt(0)) + word.substring(1);
+	}
 
-    public String generateInitials(String firstName, String lastName) {
-        String initstr = Character.toUpperCase(firstName.charAt(0)) + "." + Character.toUpperCase(lastName.charAt(0));
-        return initstr;
-    }
+	public String generateInitials(String firstName, String lastName) {
+		return Character.toUpperCase(firstName.charAt(0)) + "." + Character.toUpperCase(lastName.charAt(0));
 
-    public double addVat(double originalPrice, double vatRate) {
-        double cal = (originalPrice * vatRate) / 100;
-        cal += originalPrice;
-        BigDecimal bd = new BigDecimal(cal).setScale(2, RoundingMode.HALF_UP);
+	}
 
-        return bd.doubleValue();
-    }
+	public double addVat(double originalPrice, double vatRate) {
+		double cal = (originalPrice * vatRate) / 100;
+		cal += originalPrice;
+		BigDecimal bd = new BigDecimal(cal).setScale(2, RoundingMode.HALF_UP);
 
-    public String reverse(String sentence) {
-        StringBuilder reversestr = new StringBuilder();
-        reversestr.append(sentence);
-        reversestr = reversestr.reverse();
+		return bd.doubleValue();
+	}
 
-        return reversestr.toString();
-    }
+	public String reverse(String sentence) {
+		StringBuilder reverseStr = new StringBuilder();
+		reverseStr.append(sentence);
+		reverseStr = reverseStr.reverse();
 
-    public int countLinuxUsers(List < User > users) {
+		return reverseStr.toString();
+	}
 
-        int count = 0;
-        for (User userObj: users) {
-            if (userObj.getType().equals("Linux")) {
-                count++;
-            }
-        }
+	public int countLinuxUsers(List<User> users) {
 
-        return count;
-    }
+		int count = 0;
+		for (User userObj: users) {
+			if (userObj.getType().equals("Linux")) {
+				count++;
+			}
+		}
+
+		return count;
+	}
 }
